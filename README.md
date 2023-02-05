@@ -7,7 +7,13 @@ Quadruped robot simulation
 ```
 catkin_make
 ```
-
-# Running the simulation
-
-
+# Running the Simulation
+1. Launch gazebo and robot model
+```
+roslaunch testudog testudog_launch.launch
+```
+2. Run robot motor controller 
+```
+rosrun testudog gazebo_controller
+```
+# Changing Gaits
