@@ -1,0 +1,65 @@
+# Define robot name
+  robot_name: "testudog_controller"
+  # default controller
+  joint_state_controller:
+     type: joint_state_controller/JointStateController
+     publish_rate: 50
+
+  # Front Left Leg 
+  front_left_rolling_controller:
+     type: position_controllers/JointPositionController
+     joint: front_left_rolling_joint
+
+  front_left_pitching_controller:
+     type: position_controllers/JointPositionController
+     joint: front_left_pitching_joint
+
+  front_left_knee_controller:
+     type: position_controllers/JointPositionController
+     joint: front_left_knee_joint
+
+  # Front Right Leg 
+  front_right_rolling_controller:
+     type: position_controllers/JointPositionController
+     joint: front_right_rolling_joint
+
+  front_right_pitching_controller:
+     type: position_controllers/JointPositionController
+     joint: front_right_pitching_joint
+
+  front_right_knee_controller:
+     type: position_controllers/JointPositionController
+     joint: front_right_knee_joint
+
+  # Back Left Leg 
+  back_left_rolling_controller:
+     type: position_controllers/JointPositionController
+     joint: back_left_rolling_joint
+
+  back_left_pitching_controller:
+     type: position_controllers/JointPositionController
+     joint: back_left_pitching_joint
+
+  back_left_knee_controller:
+     type: position_controllers/JointPositionController
+     joint: back_left_knee_joint
+
+  # Back Right Leg 
+  back_right_rolling_controller:
+     type: position_controllers/JointPositionController
+     joint: back_right_rolling_joint
+
+  back_right_pitching_controller:
+     type: position_controllers/JointPositionController
+     joint: back_right_pitching_joint
+
+  back_right_knee_controller:
+     type: position_controllers/JointPositionController
+     joint: back_right_knee_joint
+
+
+
+
+
+
+ 

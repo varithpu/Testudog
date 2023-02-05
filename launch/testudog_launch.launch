@@ -1,0 +1,34 @@
+<launch>
+
+<!-- gazebo world -->
+	<include
+		file="$(find gazebo_ros)/launch/empty_world.launch" >
+	<!--	<arg name="world_name" value="$(find testudog)/launch/competition_arena.world"/> -->
+	</include>	
+	
+<!-- robot -->
+	<param name = "robot_model" value="testudog_integration"/> 
+	<param name= "robot_description" command="$(find xacro)/xacro --inorder $(find testudog)/urdf/testudog_integration.xacro "/>
+	<arg name ="init_pose" value="-x 0 -y 0 -z 0.4 -R 0 -P 0 -Y 0 -J front_left_pitching_joint 0.5 -J front_left_knee_joint -1.0 -J front_right_pitching_joint -0.5 -J front_right_knee_joint -1.0 
+		-J back_left_pitching_joint 0.5 -J back_left_knee_joint -1.0 -J back_right_pitching_joint -0.5 -J back_right_knee_joint -1.0" />
+	<node name="spawn_model" pkg="gazebo_ros" type="spawn_model" 
+		args="$(arg init_pose) -param robot_description -urdf -model robot_model" output="screen" />
+	<node name="fake_joint_calibration" pkg="rostopic" type="rostopic" args="pub /calibrated std_msgs/Bool true" />
+
+<!-- controllers -->
+	<rosparam file="$(find testudog)/config/testudog_controller.yaml" command="load" ns="testudog_controller"/>
+	<node name="controller_spwaner" pkg="controller_manager" type="spawner" respawn="false" output="screen" ns="testudog_controller" 
+		args="front_left_rolling_controller front_left_pitching_controller front_left_knee_controller front_right_rolling_controller front_right_pitching_controller front_right_knee_controller 
+			back_left_rolling_controller back_left_pitching_controller back_left_knee_controller back_right_rolling_controller back_right_pitching_controller back_right_knee_controller
+			joint_state_controller" /> 
+
+<!-- tf -->
+	<node name="robot_state_publisher" pkg="robot_state_publisher" type="robot_state_publisher" respawn="false" output="screen">	
+		<remap from="/joint_states" to="/testudog_controller/joint_states" /> 
+	</node>
+	<node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher"/>
+	<param name="use_gui" value="False"/>
+	<node name="tf_footprint_base" pkg="tf" type="static_transform_publisher" args="1 0 0 0 0 0 1 /map /dummy_link 10" />
+</launch>
+
+

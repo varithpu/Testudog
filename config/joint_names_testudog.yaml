@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'front_left_rolling_joint', 'front_left_pitching_joint', 'front_left_knee_joint', 'front_right_rolling_joint', 'front_right_pitching_joint', 'front_right_knee_joint', 'back_left_rolling_joint', 'back_left_pitching_point', 'back_left_knee_joint', 'back_right_rolling_joint', 'back_right_pitching_joint', 'back_right_knee_joint', ]

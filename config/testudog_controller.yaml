@@ -1,0 +1,76 @@
+# Define robot name
+  robot_name: "testudog_controller"
+  # default controller
+  joint_state_controller:
+     type: joint_state_controller/JointStateController
+     publish_rate: 50
+
+  # Front Left Leg 
+  front_left_rolling_controller:
+     type: effort_controllers/JointPositionController
+     joint: front_left_rolling_joint
+     pid : {p: 35, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  front_left_pitching_controller:
+     type: effort_controllers/JointPositionController
+     joint: front_left_pitching_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  front_left_knee_controller:
+     type: effort_controllers/JointPositionController
+     joint: front_left_knee_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  # Front Right Leg 
+  front_right_rolling_controller:
+     type: effort_controllers/JointPositionController
+     joint: front_right_rolling_joint
+     pid : {p: 35, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  front_right_pitching_controller:
+     type: effort_controllers/JointPositionController
+     joint: front_right_pitching_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  front_right_knee_controller:
+     type: effort_controllers/JointPositionController
+     joint: front_right_knee_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  # Back Left Leg 
+  back_left_rolling_controller:
+     type: effort_controllers/JointPositionController
+     joint: back_left_rolling_joint
+     pid : {p: 35, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  back_left_pitching_controller:
+     type: effort_controllers/JointPositionController
+     joint: back_left_pitching_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  back_left_knee_controller:
+     type: effort_controllers/JointPositionController
+     joint: back_left_knee_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  # Back Right Leg 
+  back_right_rolling_controller:
+     type: effort_controllers/JointPositionController
+     joint: back_right_rolling_joint
+     pid : {p: 35, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  back_right_pitching_controller:
+     type: effort_controllers/JointPositionController
+     joint: back_right_pitching_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+  back_right_knee_controller:
+     type: effort_controllers/JointPositionController
+     joint: back_right_knee_joint
+     pid : {p: 28, i: 0.0, d: 0.18, i_clamp_min:  -1000, i_clamp_max: 1000}
+
+
+
+
+
+ 
