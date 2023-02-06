@@ -19,7 +19,7 @@ roslaunch testudog testudog_launch.launch
 ```
 rosrun testudog gazebo_controller
 ```
-The robot will start troting. Publish a geometry_msgs/Twist message to /cmd_vel topic to manually control the robot.
+The robot will start troting. Publish a `geometry_msgs/Twist` message to `/cmd_vel topic` to manually control the robot.
 # Running the Simulation - Navigation in a Maze
 1. Launch gazebo and robot model
 ```
