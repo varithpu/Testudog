@@ -38,7 +38,7 @@ int main(int argc, char **argv){
 	ros::Rate loop_rate(60);
 
     while(ros::ok()){
-		test.reach_goal();
+		//test.reach_goal();
 		double step_time = 0.5;
 		double fwd_step = test.get_lin_vel()*step_time;
 		double rot_step = test.get_ang_vel()*step_time;
