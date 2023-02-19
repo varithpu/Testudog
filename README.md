@@ -1,7 +1,7 @@
 # Testudog
 Quadruped robot simulation 
 
-# Installation
+## Installation
 1. Clone Testudog repository into your ROS workspace
 ```
 git clone https://github.com/varithpu/Testudog.git
@@ -10,7 +10,7 @@ git clone https://github.com/varithpu/Testudog.git
 ```
 catkin_make
 ```
-# Running the Simulation - Manual Control
+## Running the Simulation - Manual Control
 1. Launch gazebo and robot model
 ```
 roslaunch testudog testudog_launch.launch
@@ -20,7 +20,7 @@ roslaunch testudog testudog_launch.launch
 rosrun testudog gazebo_controller
 ```
 The robot will start troting. Publish a `geometry_msgs/Twist` message to `/cmd_vel topic` to manually control the robot.
-# Running the Simulation - Navigation in a Maze
+## Running the Simulation - Navigation in a Maze
 1. Launch gazebo and robot model
 ```
 roslaunch testudog testudog_planning.launch
@@ -34,12 +34,12 @@ rosrun testudog rrtstar.py
 rosrun testudog gazebo_controller_plan
 ```
 The robot will autonomously navigate through the maze.
-# Screenshots
+## Screenshots
 Robot model <br /> 
 <img src="https://github.com/varithpu/Testudog/blob/master/pics/pic3.png" width=50% height=50%>
 
 Robot navigating the maze\
 <img src="https://github.com/varithpu/Testudog/blob/master/pics/pic4.png" width=50% height=50%>
-# Videos
+## Videos
 https://www.youtube.com/watch?v=ESzszJpOJHg&list=PLi399gcazsQb4fyoEvme6bzYnKT7WWRfm
 
