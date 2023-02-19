@@ -36,8 +36,10 @@ rosrun testudog gazebo_controller_plan
 The robot will autonomously navigate through the maze.
 # Screenshots
 Robot model <br /> 
-![alt text](https://github.com/varithpu/Testudog/blob/master/pics/pic3.png)
+<img src="https://github.com/varithpu/Testudog/blob/master/pics/pic3.png" width=50% height=50%>
 
-Robot navigating the maze
-![alt text](https://github.com/varithpu/Testudog/blob/master/pics/pic4.png)
+Robot navigating the maze\
+<img src="https://github.com/varithpu/Testudog/blob/master/pics/pic4.png" width=50% height=50%>
+# Videos
+https://www.youtube.com/watch?v=ESzszJpOJHg&list=PLi399gcazsQb4fyoEvme6bzYnKT7WWRfm
 
