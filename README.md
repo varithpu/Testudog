@@ -1,6 +1,5 @@
 # Testudog
-Quadruped robot simulation in Gazebo. 
-
+Quadruped robot simulation in Gazebo. The robot is capable of body twisting and moving with different gaits. It balances itself on a slope with body orientation feedback control. For autonomous navigation task, RRT* is used for global planner, and waypoint following controller is used as local planner.
 ## Installation
 1. Clone Testudog repository into your ROS workspace
 ```
