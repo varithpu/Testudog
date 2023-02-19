@@ -1,5 +1,5 @@
 # Testudog
-Quadruped robot simulation 
+Quadruped robot simulation in Gazebo. 
 
 ## Installation
 1. Clone Testudog repository into your ROS workspace
